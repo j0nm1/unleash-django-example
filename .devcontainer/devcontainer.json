@@ -1,0 +1,13 @@
+{
+  "name": "Python",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "python.pythonPath": "/usr/local/bin/python"
+  },
+  "extensions": ["ms-python.python"],
+  "forwardPorts": [8000, 5432, 4242],
+  "postCreateCommand": "pip3 install -r requirements/local.txt && pip3 install pip-chill"
+}
